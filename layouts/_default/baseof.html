@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <title>{{ .Title }}</title>
+    
+    <!-- Loading Bootstrap -->
+    <link href="{{ "css/bootstrap.min.css" | relURL }}" rel="stylesheet">
+
+    <!-- Loading Template CSS -->
+    <link href="{{ "css/style.css" | relURL }}" rel="stylesheet">
+    <link href="{{ "css/animate.css" | relURL }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ "css/pe-icon-7-stroke.css" | relURL }}">
+    <link href="{{ "css/style-magnific-popup.css" | relURL }}" rel="stylesheet">
+
+    <!-- Awsome Fonts -->
+    <link rel="stylesheet" href="{{ "css/all.min.css" | relURL }}">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+
+    <!-- Font Favicon -->
+    <link rel="shortcut icon" href="{{ "images/favicon.ico" | relURL }}">
+</head>
+<body>
+    {{ partial "header.html" . }}
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+
+    <!-- Load JS here for greater good =============================-->
+    <script src="{{ "js/jquery-3.3.1.min.js" | relURL }}"></script>
+    <script src="{{ "js/bootstrap.min.js" | relURL }}"></script>
+    <script src="{{ "js/jquery.scrollTo-min.js" | relURL }}"></script>
+    <script src="{{ "js/jquery.magnific-popup.min.js" | relURL }}"></script>
+    <script src="{{ "js/jquery.nav.js" | relURL }}"></script>
+    <script src="{{ "js/wow.js" | relURL }}"></script>
+    <script src="{{ "js/plugins.js" | relURL }}"></script>
+    <script src="{{ "js/custom.js" | relURL }}"></script>
+</body>
+</html>
