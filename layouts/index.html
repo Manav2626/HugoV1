@@ -1,6 +1,8 @@
 {{ define "main" }}
-    
-    {{ partial "1_hero" .}}
+
+
+{{ $hero := .Site.GetPage "/1_hero" }}
+    {{ partial "1_hero" $hero}}
     {{ partial "2_partners" .}}
     {{ partial "3_about" .}}
     {{ partial "4_testimonials" .}}
