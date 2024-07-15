@@ -10,30 +10,31 @@
             <!--begin col-md-6-->
             <div class="col-md-6 margin-top-40 hero-content">
 
-                <h1>Discover The Wold's Most Advanced Online Tool</h1>
+                <h1>{{ .Title }}</h1>
 
-                <p class="hero-text">Track and analyze all your data in one central location.</p>
+                <p class="hero-text">{{ .Params.subtitle }}</p>
 
                 <!--begin newsletter_form_box -->
                 <div class="newsletter_form_box">
                     
                     <!--begin success_box -->
-                    <p class="newsletter_success_box" style="display:none;">We received your message and you'll hear from us soon. Thank You!</p>
+                    <p class="newsletter_success_box" style="display:none;">{{ .Params.newsletter_success_message }}</p>
                     <!--end success_box -->
                     
                     <!--begin newsletter-form -->
                     <form id="newsletter-form" class="newsletter-form" action="php/newsletter.php" method="post">
 
-                        <input id="email_newsletter" type="email" name="nf_email" placeholder="Enter Your Email Address">  
+                        <input id="email_newsletter" type="email" name="nf_email" placeholder="{{ .Params.newsletter_placeholder }}">  
 
-                        <input type="submit" value="GET STARTED!" id="submit-button-newsletter">
+                        <input type="submit" value="{{ .Params.newsletter_button_text }}" id="submit-button-newsletter">
 
                     </form>
                     <!--end newsletter-form -->
 
                     <p class="newsletter-form-terms">
-                        <span><i class="fas fa-check"></i> Free 30-Day Trial</span>
-                        <span><i class="fas fa-check"></i> Money Back Guarantee</span>
+                        {{ range .Params.newsletter_terms }}
+                          <span><i class="fas fa-check"></i> {{ . }}</span>
+                        {{ end }}
                     </p>
 
                 </div>
@@ -45,7 +46,7 @@
             <!--begin col-md-6-->
             <div class="col-md-6 hero-img">
 
-                <img src="http://placehold.it/555x600" class="width-100 top-margins-images" alt="pic">
+                <img src="{{ .Params.image | absURL }}" class="width-100 top-margins-images" alt="pic">
 
             </div>
             <!--end col-md-6-->
