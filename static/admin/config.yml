@@ -1,8 +1,7 @@
 backend:
   name: git-gateway
   branch: main  # Branch to update (replace with your branch if different)
-
-publish_mode: editorial_workflow
+  publish_mode: editorial_workflow
 
 media_folder: "static/images/uploads"  # Folder where user uploads are stored
 public_folder: "/images/uploads"  # Folder for user uploads in the published site
@@ -46,7 +45,6 @@ collections:
           { label: "Service Description", name: "service_description", widget: "text" }
         ] }
 
-
   - name: "4_testimonials"
     label: "Testimonials Section"
     folder: "content/4_testimonials"
@@ -78,7 +76,6 @@ collections:
           { label: "Bio", name: "bio", widget: "text" }
         ] }
 
-
   - name: "6_discover"
     label: "Discover Section"
     folder: "content/6_discover"
@@ -92,7 +89,6 @@ collections:
       - { label: "Button Text", name: "button_text", widget: "string" }
       - { label: "Button Link", name: "button_link", widget: "string" }
 
-
   - name: "portfolio"
     label: "Portfolio"
     folder: "content/portfolio"
@@ -102,8 +98,7 @@ collections:
       - { label: "Subtitle", name: "subtitle", widget: "string" }
       - { label: "Items", name: "items", widget: "list", fields: [
           { label: "Image", name: "image", widget: "image" }
-        ]}
-
+        ] }
 
   - name: "award-winning"
     label: "Award-Winning Section"
@@ -116,121 +111,53 @@ collections:
       - { label: "Buttons", name: "buttons", widget: "list", fields: [
           { label: "Text", name: "text", widget: "string" },
           { label: "Link", name: "link", widget: "string" }
-        ]}
+        ] }
 
   - name: "workflow"
-        label: "Customize Your Workflow"
-        file: "content/workflow.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Icon 1", name: "icon1", widget: "image" }
-          - { label: "Title 1", name: "title1", widget: "string" }
-          - { label: "Description 1", name: "description1", widget: "string" }
-          - { label: "Image 1", name: "image1", widget: "image" }
-          - { label: "Icon 2", name: "icon2", widget: "image" }
-          - { label: "Title 2", name: "title2", widget: "string" }
-          - { label: "Description 2", name: "description2", widget: "string" }
-          - { label: "Image 2", name: "image2", widget: "image" }
-          - { label: "Icon 3", name: "icon3", widget: "image" }
-          - { label: "Title 3", name: "title3", widget: "string" }
-          - { label: "Description 3", name: "description3", widget: "string" }
-          - { label: "Image 3", name: "image3", widget: "image" }
+    label: "Customize Your Workflow"
+    file: "content/workflow.md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Icon 1", name: "icon1", widget: "image" }
+      - { label: "Title 1", name: "title1", widget: "string" }
+      - { label: "Description 1", name: "description1", widget: "string" }
+      - { label: "Image 1", name: "image1", widget: "image" }
+      - { label: "Icon 2", name: "icon2", widget: "image" }
+      - { label: "Title 2", name: "title2", widget: "string" }
+      - { label: "Description 2", name: "description2", widget: "string" }
+      - { label: "Image 2", name: "image2", widget: "image" }
+      - { label: "Icon 3", name: "icon3", widget: "image" }
+      - { label: "Title 3", name: "title3", widget: "string" }
+      - { label: "Description 3", name: "description3", widget: "string" }
+      - { label: "Image 3", name: "image3", widget: "image" }
 
   - name: "features"
-        label: "Amazing Features"
-        file: "content/features.md"
+    label: "Amazing Features"
+    file: "content/features.md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - label: "Features"
+        name: "features"
+        widget: "list"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Icon", name: "icon", widget: "string" }
+          - { label: "Color", name: "color", widget: "string" }
+
+  - name: "plans"
+    label: "Plans"
+    file: "content/plans.md"
+    fields:
+      - label: "Plans"
+        name: "plans"
+        widget: "list"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Price", name: "price", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Link", name: "link", widget: "string" }
           - label: "Features"
             name: "features"
             widget: "list"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "Icon", name: "icon", widget: "string" }
-              - { label: "Color", name: "color", widget: "string" }
-
-  - name: "plans"
-        label: "Plans"
-        file: "content/plans.md"
-        fields:
-          - label: "Plans"
-            name: "plans"
-            widget: "list"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Price", name: "price", widget: "string" }
-              - { label: "Subtitle", name: "subtitle", widget: "string" }
-              - { label: "Link", name: "link", widget: "string" }
-              - label: "Features"
-                name: "features"
-                widget: "list"
-                fields:
-                  - { label: "Feature", name: "feature", widget: "string" }
-              - { label: "Color", name: "color", widget: "string" }
-              - { label: "Delay", name: "delay", widget: "string" }
-
-  - name: "discover"
-        label: "Discover Section"
-        file: "content/discover.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Image", name: "image", widget: "image" }
-          - { label: "Headline", name: "headline", widget: "string" }
-          - label: "Items"
-            name: "items"
-            widget: "list"
-            fields:
-              - { label: "Question", name: "question", widget: "string" }
-              - { label: "Answer", name: "answer", widget: "text" }
-
-  - name: "fun-facts"
-        label: "Fun Facts"
-        folder: "content/fun-facts"
-        create: true
-        slug: "{{slug}}"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Headline", name: "headline", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
-          - { label: "Facts", name: "facts", widget: "list", fields:
-              - { label: "Icon", name: "icon", widget: "string" }
-              - { label: "Number", name: "number", widget: "string" }
-              - { label: "Description", name: "description", widget: "string" }
-              - { label: "Color", name: "color", widget: "select", options:
-                  [
-                    { label: "Blue", value: "blue" },
-                    { label: "Red", value: "red" },
-                    { label: "Green", value: "green" },
-                    { label: "Yellow", value: "yellow" }
-                  ]
-                }
-            }
-
-  - name: "faq"
-        label: "FAQ Section"
-        file: "content/faq.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Section Title", name: "section_title", widget: "string" }
-          - { label: "Section Subtitle", name: "section_subtitle", widget: "string" }
-          - label: "FAQs"
-            name: "faqs"
-            widget: "list"
-            fields:
-              - { label: "Question", name: "question", widget: "string" }
-              - { label: "Answer", name: "answer", widget: "text" }
-
-  - name: "contact"
-        label: "Contact Section"
-        file: "content/contact.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Section Title", name: "section_title", widget: "string" }
-          - { label: "Section Subtitle", name: "section_subtitle", widget: "string" }
-          - { label: "Register Success Message", name: "register_success_message", widget: "text" }
-          - { label: "Company Placeholder", name: "company_placeholder", widget: "string" }
-          - { label: "Email Placeholder", name: "email_placeholder", widget: "string" }
-          - { label: "Submit Text", name: "submit_text", widget: "string" }
-          - { label: "Terms", name: "terms", widget: "string" }
