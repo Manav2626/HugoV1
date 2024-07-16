@@ -1,7 +1,8 @@
 backend:
   name: git-gateway
   branch: main  # Branch to update (replace with your branch if different)
-  publish_mode: editorial_workflow
+
+publish_mode: editorial_workflow
 
 media_folder: "static/images/uploads"  # Folder where user uploads are stored
 public_folder: "/images/uploads"  # Folder for user uploads in the published site
@@ -45,6 +46,7 @@ collections:
           { label: "Service Description", name: "service_description", widget: "text" }
         ] }
 
+
   - name: "4_testimonials"
     label: "Testimonials Section"
     folder: "content/4_testimonials"
@@ -76,6 +78,7 @@ collections:
           { label: "Bio", name: "bio", widget: "text" }
         ] }
 
+
   - name: "6_discover"
     label: "Discover Section"
     folder: "content/6_discover"
@@ -89,6 +92,7 @@ collections:
       - { label: "Button Text", name: "button_text", widget: "string" }
       - { label: "Button Link", name: "button_link", widget: "string" }
 
+
   - name: "portfolio"
     label: "Portfolio"
     folder: "content/portfolio"
@@ -98,7 +102,8 @@ collections:
       - { label: "Subtitle", name: "subtitle", widget: "string" }
       - { label: "Items", name: "items", widget: "list", fields: [
           { label: "Image", name: "image", widget: "image" }
-        ] }
+        ]}
+
 
   - name: "award-winning"
     label: "Award-Winning Section"
@@ -111,7 +116,7 @@ collections:
       - { label: "Buttons", name: "buttons", widget: "list", fields: [
           { label: "Text", name: "text", widget: "string" },
           { label: "Link", name: "link", widget: "string" }
-        ] }
+        ]}
 
   - name: "workflow"
     label: "Customize Your Workflow"
@@ -163,32 +168,69 @@ collections:
             widget: "list"
             fields:
               - { label: "Feature", name: "feature", widget: "string" }
+          - { label: "Color", name: "color", widget: "string" }
+          - { label: "Delay", name: "delay", widget: "string" }
+
+  - name: "discover"
+    label: "Discover Section"
+    file: "content/discover.md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Headline", name: "headline", widget: "string" }
+      - label: "Items"
+        name: "items"
+        widget: "list"
+        fields:
+          - { label: "Question", name: "question", widget: "string" }
+          - { label: "Answer", name: "answer", widget: "text" }
+
+  - name: "fun-facts"
+    label: "Fun Facts"
+    folder: "content/fun-facts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Headline", name: "headline", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Facts", name: "facts", widget: "list", fields:
+          - { label: "Icon", name: "icon", widget: "string" }
+          - { label: "Number", name: "number", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Color", name: "color", widget: "select", options:
+              [
+                { label: "Blue", value: "blue" },
+                { label: "Red", value: "red" },
+                { label: "Green", value: "green" },
+                { label: "Yellow", value: "yellow" }
+              ]
+            }
+        }
 
   - name: "faq"
-    label: "FAQs"
-    folder: "content/faq"
-    create: true
+    label: "FAQ Section"
+    file: "content/faq.md"
     fields:
-      - { label: "Question", name: "question", widget: "string" }
-      - { label: "Answer", name: "answer", widget: "text" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Section Title", name: "section_title", widget: "string" }
+      - { label: "Section Subtitle", name: "section_subtitle", widget: "string" }
+      - label: "FAQs"
+        name: "faqs"
+        widget: "list"
+        fields:
+          - { label: "Question", name: "question", widget: "string" }
+          - { label: "Answer", name: "answer", widget: "text" }
 
   - name: "contact"
-    label: "Contact Us"
+    label: "Contact Section"
     file: "content/contact.md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Subtitle", name: "subtitle", widget: "string" }
-      - { label: "Address", name: "address", widget: "string" }
-      - { label: "Phone", name: "phone", widget: "string" }
-      - { label: "Email", name: "email", widget: "string" }
-      - { label: "Map Link", name: "map_link", widget: "string" }
-
-  - name: "footer"
-    label: "Footer"
-    file: "content/footer.md"
-    fields:
-      - { label: "Copyright Text", name: "copyright_text", widget: "string" }
-      - { label: "Social Links", name: "social_links", widget: "list", fields: [
-          { label: "Icon", name: "icon", widget: "image" },
-          { label: "Link", name: "link", widget: "string" }
-        ] }
+      - { label: "Section Title", name: "section_title", widget: "string" }
+      - { label: "Section Subtitle", name: "section_subtitle", widget: "string" }
+      - { label: "Register Success Message", name: "register_success_message", widget: "text" }
+      - { label: "Company Placeholder", name: "company_placeholder", widget: "string" }
+      - { label: "Email Placeholder", name: "email_placeholder", widget: "string" }
+      - { label: "Submit Text", name: "submit_text", widget: "string" }
+      - { label: "Terms", name: "terms", widget: "string" }
