@@ -1,4 +1,5 @@
 ---
+title: "Pricing"
 plans:
   - title: "MONTHLY"
     price: "$19"

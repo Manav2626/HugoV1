@@ -1,4 +1,5 @@
 ---
+title: "Testimonials"
 testimonials:
   - index: 0
     testimonial_image: "http://placehold.it/555x365"

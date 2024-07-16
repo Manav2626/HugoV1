@@ -1,11 +1,11 @@
 backend:
   name: git-gateway
-  branch: main  # Branch to update (replace with your branch if different)
+  branch: main # Branch to update (replace with your branch if different)
 
 publish_mode: editorial_workflow
 
-media_folder: "static/images/uploads"  # Folder where user uploads are stored
-public_folder: "/images/uploads"  # Folder for user uploads in the published site
+media_folder: "static/images/uploads" # Folder where user uploads are stored
+public_folder: "/images/uploads" # Folder for user uploads in the published site
 
 collections:
   - name: "hero"
@@ -17,10 +17,28 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Subtitle", name: "subtitle", widget: "string" }
       - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Newsletter Success Message", name: "newsletter_success_message", widget: "string" }
-      - { label: "Newsletter Placeholder", name: "newsletter_placeholder", widget: "string" }
-      - { label: "Newsletter Button Text", name: "newsletter_button_text", widget: "string" }
-      - { label: "Newsletter Terms", name: "newsletter_terms", widget: "list", default: [], field: { label: "Term", name: "term", widget: "string" } }
+      - {
+          label: "Newsletter Success Message",
+          name: "newsletter_success_message",
+          widget: "string",
+        }
+      - {
+          label: "Newsletter Placeholder",
+          name: "newsletter_placeholder",
+          widget: "string",
+        }
+      - {
+          label: "Newsletter Button Text",
+          name: "newsletter_button_text",
+          widget: "string",
+        }
+      - {
+          label: "Newsletter Terms",
+          name: "newsletter_terms",
+          widget: "list",
+          default: [],
+          field: { label: "Term", name: "term", widget: "string" },
+        }
 
   - name: "2_partners"
     label: "Partners Section"
@@ -29,7 +47,12 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Partners Title", name: "partners_title", widget: "string" }
-      - { label: "Partner Images", name: "partner_images", widget: "list", field: { label: "Image", name: "image", widget: "image" } }
+      - {
+          label: "Partner Images",
+          name: "partner_images",
+          widget: "list",
+          field: { label: "Image", name: "image", widget: "image" },
+        }
 
   - name: "3_about"
     label: "About Section"
@@ -38,14 +61,35 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Section Title", name: "section_title", widget: "string" }
-      - { label: "Section Subtitle", name: "section_subtitle", widget: "string" }
-      - { label: "Services", name: "services", widget: "list", fields: [
-          { label: "Service Title", name: "service_title", widget: "string" },
-          { label: "Service Icon", name: "service_icon", widget: "string" },
-          { label: "Service Color", name: "service_color", widget: "string" },
-          { label: "Service Description", name: "service_description", widget: "text" }
-        ] }
-
+      - {
+          label: "Section Subtitle",
+          name: "section_subtitle",
+          widget: "string",
+        }
+      - {
+          label: "Services",
+          name: "services",
+          widget: "list",
+          fields:
+            [
+              {
+                label: "Service Title",
+                name: "service_title",
+                widget: "string",
+              },
+              { label: "Service Icon", name: "service_icon", widget: "string" },
+              {
+                label: "Service Color",
+                name: "service_color",
+                widget: "string",
+              },
+              {
+                label: "Service Description",
+                name: "service_description",
+                widget: "text",
+              },
+            ],
+        }
 
   - name: "4_testimonials"
     label: "Testimonials Section"
@@ -53,14 +97,40 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Testimonials", name: "testimonials", widget: "list", fields: [
-          { label: "Index", name: "index", widget: "hidden", default: 0 },
-          { label: "Testimonial Image", name: "testimonial_image", widget: "image", required: false },
-          { label: "Video Link", name: "video_link", widget: "string" },
-          { label: "Testimonial Text", name: "testimonial_text", widget: "text" },
-          { label: "Testimonial Author", name: "testimonial_author", widget: "string" },
-          { label: "Testimonial Position", name: "testimonial_position", widget: "string" }
-        ] }
+      - { label: "Section Title", name: "section_title", widget: "string" } #this line was casuing problem 
+      - { label: "Testimonial Author", name: "testimonial_author", widget: "string" }
+      - {
+          label: "Testimonials",
+          name: "testimonials",
+          widget: "list",
+          fields:
+            [
+              { label: "Index", name: "index", widget: "hidden", default: 0 },
+              {
+                label: "Testimonial Image",
+                name: "testimonial_image",
+                widget: "image",
+                required: false,
+              },
+              { label: "Video Link", name: "video_link", widget: "string" },
+              {
+                label: "Testimonial Text",
+                name: "testimonial_text",
+                widget: "text",
+              },
+              {
+                label: "Testimonial Author",
+                name: "testimonial_author",
+                widget: "string",
+              },
+              {
+                label: "Testimonial Position",
+                name: "testimonial_position",
+                widget: "string",
+              },
+            ],
+        }
+
 
   - name: "5_team"
     label: "Team Section"
@@ -69,14 +139,34 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Section Title", name: "section_title", widget: "string" }
-      - { label: "Section Subtitle", name: "section_subtitle", widget: "string" }
-      - { label: "Team Members", name: "team_members", widget: "list", fields: [
-          { label: "Name", name: "name", widget: "string" },
-          { label: "Image", name: "image", widget: "image", required: false },
-          { label: "Color", name: "color", widget: "select", options: ["green", "red", "yellow"] },
-          { label: "Position", name: "position", widget: "string" },
-          { label: "Bio", name: "bio", widget: "text" }
-        ] }
+      - {
+          label: "Section Subtitle",
+          name: "section_subtitle",
+          widget: "string",
+        }
+      - {
+          label: "Team Members",
+          name: "team_members",
+          widget: "list",
+          fields:
+            [
+              { label: "Name", name: "name", widget: "string" },
+              {
+                label: "Image",
+                name: "image",
+                widget: "image",
+                required: false,
+              },
+              {
+                label: "Color",
+                name: "color",
+                widget: "select",
+                options: ["green", "red", "yellow"],
+              },
+              { label: "Position", name: "position", widget: "string" },
+              { label: "Bio", name: "bio", widget: "text" },
+            ],
+        }
 
   - name: "6_discover"
     label: "Discover Section"
@@ -87,7 +177,12 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Benefits", name: "benefits", widget: "list", field: { label: "Benefit", name: "benefit", widget: "string" } }
+      - {
+          label: "Benefits",
+          name: "benefits",
+          widget: "list",
+          field: { label: "Benefit", name: "benefit", widget: "string" },
+        }
       - { label: "Button Text", name: "button_text", widget: "string" }
       - { label: "Button Link", name: "button_link", widget: "string" }
 
@@ -98,8 +193,165 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Subtitle", name: "subtitle", widget: "string" }
-      - { label: "Items", name: "items", widget: "list", fields: [
-          { label: "Image", name: "image", widget: "image" }
-        ]}
+      - {
+          label: "Items",
+          name: "items",
+          widget: "list",
+          fields: [{ label: "Image", name: "image", widget: "image" }],
+        }
 
- 
+  - name: "award-winning"
+    label: "Award-Winning Section"
+    folder: "content/8_award-winning"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - {
+          label: "Buttons",
+          name: "buttons",
+          widget: "list",
+          fields:
+            [
+              { label: "Text", name: "text", widget: "string" },
+              { label: "Link", name: "link", widget: "string" },
+            ],
+        }
+
+  - name: "workflow"
+    label: "Customize Your Workflow"
+    folder: "content/9_customize"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Icon 1", name: "icon1", widget: "image" }
+      - { label: "Title 1", name: "title1", widget: "string" }
+      - { label: "Description 1", name: "description1", widget: "string" }
+      - { label: "Image 1", name: "image1", widget: "image" }
+      - { label: "Icon 2", name: "icon2", widget: "image" }
+      - { label: "Title 2", name: "title2", widget: "string" }
+      - { label: "Description 2", name: "description2", widget: "string" }
+      - { label: "Image 2", name: "image2", widget: "image" }
+      - { label: "Icon 3", name: "icon3", widget: "image" }
+      - { label: "Title 3", name: "title3", widget: "string" }
+      - { label: "Description 3", name: "description3", widget: "string" }
+      - { label: "Image 3", name: "image3", widget: "image" }
+
+  - name: "features"
+    label: "Amazing Features"
+    folder: "content/10_features"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - label: "Features"
+        name: "features"
+        widget: "list"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Icon", name: "icon", widget: "string" }
+          - { label: "Color", name: "color", widget: "string" }
+
+  - name: "plans"
+    label: "Plans"
+    folder: "content/11_pricing"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }  # Add this line
+      - label: "Plans"
+        name: "plans"
+        widget: "list"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Price", name: "price", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Link", name: "link", widget: "string" }
+          - label: "Features"
+            name: "features"
+            widget: "list"
+            fields:
+              - { label: "Feature", name: "feature", widget: "string" }
+          - { label: "Color", name: "color", widget: "string" }
+          - { label: "Delay", name: "delay", widget: "string" }
+
+
+  - name: "discover"
+    label: "Discover Section"
+    folder: "content/12_discover"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Headline", name: "headline", widget: "string" }
+      - label: "Items"
+        name: "items"
+        widget: "list"
+        fields:
+          - { label: "Question", name: "question", widget: "string" }
+          - { label: "Answer", name: "answer", widget: "text" }
+
+  - name: "fun-facts"
+    label: "Fun Facts"
+    folder: "content/13_fun-facts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Headline"
+        name: "headline"
+        widget: "string"
+      - label: "Description"
+        name: "description"
+        widget: "text"
+      - label: "Facts"
+        name: "facts"
+        widget: "list"
+        fields:
+          - label: "Icon"
+            name: "icon"
+            widget: "string"
+          - label: "Number"
+            name: "number"
+            widget: "string"
+          - label: "Description"
+            name: "description"
+            widget: "string"
+          - label: "Color"
+            name: "color"
+            widget: "select"
+            options:
+              - label: "Blue"
+                value: "blue"
+              - label: "Red"
+                value: "red"
+              - label: "Green"
+                value: "green"
+              - label: "Yellow"
+                value: "yellow"
+
+  - name: "faq"
+    label: "FAQ Section"
+    folder: "content/14_faq"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Section Title", name: "section_title", widget: "string" }
+      - { label: "Section Subtitle", name: "section_subtitle", widget: "string" }
+      - label: "FAQs"
+        name: "faqs"
+        widget: "list"
+        fields:
+          - { label: "Question", name: "question", widget: "string" }
+          - { label: "Answer", name: "answer", widget: "text" }
+
+  - name: "contact"
+    label: "Contact Section"
+    folder: "content/15_contact"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Section Title", name: "section_title", widget: "string" }
+      - { label: "Section Subtitle", name: "section_subtitle", widget: "string" }
+      - { label: "Register Success Message", name: "register_success_message", widget: "text" }
+      - { label: "Company Placeholder", name: "company_placeholder", widget: "string" }
+      - { label: "Email Placeholder", name: "email_placeholder", widget: "string" }
+      - { label: "Submit Text", name: "submit_text", widget: "string" }
+      - { label: "Terms", name: "terms", widget: "string" }
