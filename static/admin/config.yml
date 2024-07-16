@@ -97,6 +97,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - { label: "Title", name: "title", widget: "string" }  # Add this line
       - { label: "Testimonial Author", name: "testimonial_author", widget: "string" }
       - {
           label: "Testimonials",
@@ -255,6 +256,7 @@ collections:
     label: "Plans"
     folder: "content/11_pricing"
     fields:
+      - { label: "Title", name: "title", widget: "string" }  # Add this line
       - label: "Plans"
         name: "plans"
         widget: "list"
