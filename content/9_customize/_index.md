@@ -1,16 +1,17 @@
 ---
 title: "Customize Your Workflow"
-features:
-  - id: "v-pills-home"
-    title: "Customize your workflow."
-    description: "Manage any process and be ready to address any challenge with total ease."
-    image: "images/services-icon1.png"
-  - id: "v-pills-profile"
-    title: "Easy onboarding, fast adoption."
-    description: "With Square getting your team on board is as simple as sending an email."
-    image: "images/services-icon2.png"
-  - id: "v-pills-messages"
-    title: "Improve subscriber retention."
-    description: "Analyze customers by region, discounts and more and put a plan in place."
-    image: "images/services-icon3.png"
+icon1: "images/services-icon1.png"
+title1: "Customize your workflow."
+description1: "Manage any process and be ready to address any challenge with total ease."
+image1: "http://placehold.it/555x425"
+
+icon2: "images/services-icon2.png"
+title2: "Easy onboarding, fast adoption."
+description2: "With Square getting your team on board is as simple as sending an email."
+image2: "http://placehold.it/555x425"
+
+icon3: "images/services-icon3.png"
+title3: "Improve subscriber retention."
+description3: "Analyze customers by region, discounts and more and put a plan in place."
+image3: "http://placehold.it/555x425"
 ---

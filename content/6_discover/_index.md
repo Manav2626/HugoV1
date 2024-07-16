@@ -1,5 +1,5 @@
 ---
-image: "/images/discover-image.jpg"
+image: "http://placehold.it/555x425"
 title: "Discover how we can help you to grow your business fast."
 description: "Velis demo enim ipsam voluptatem quia voluptas sit aspernatur netsum lorem fugit, seditum netis velas matrix net nesciunt."
 benefits:

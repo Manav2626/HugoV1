@@ -2,11 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/11_pricing/</loc>
+  </url><url>
+    <loc>http://localhost:1313/2_partners/</loc>
+  </url><url>
+    <loc>http://localhost:1313/3_about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/4_testimonials/</loc>
+  </url><url>
+    <loc>http://localhost:1313/5_team/</loc>
+  </url><url>
+    <loc>http://localhost:1313/10_features/</loc>
+  </url><url>
+    <loc>http://localhost:1313/8_award-winning/</loc>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/15_contact/</loc>
+  </url><url>
+    <loc>http://localhost:1313/9_customize/</loc>
+  </url><url>
+    <loc>http://localhost:1313/6_discover/</loc>
+  </url><url>
+    <loc>http://localhost:1313/12_discover/</loc>
   </url><url>
     <loc>http://localhost:1313/hero/</loc>
   </url><url>
+    <loc>http://localhost:1313/14_faq/</loc>
+  </url><url>
+    <loc>http://localhost:1313/13_fun-facts/</loc>
+  </url><url>
     <loc>http://localhost:1313/</loc>
+  </url><url>
+    <loc>http://localhost:1313/7_portfolio/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url>

@@ -9,21 +9,21 @@
 
             {{ range .Params.plans }}
             <!--begin col-md-4 -->
-            <div class="col-md-4 col-sm-6 wow bounceIn" data-wow-delay="{{ .delay }}" style="visibility: visible; animation-delay: {{ .delay }}; animation-name: bounceIn;">
+            <div class="col-md-4 col-sm-6 wow bounceIn" data-wow-delay="{{ .delay }}" style="visibility: visible; ">
 
                 <div class="price-box-{{ .color }}">
 
                     <ul class="pricing-list">
 
-                        <li class="price-title">{{ .Params.title }}</li>
+                        <li class="price-title">{{ .title }}</li>
 
-                        <li class="price-value">{{ .Params.price }}</li>
+                        <li class="price-value">{{ .price }}</li>
 
-                        <li class="price-subtitle">{{ .Params.subtitle }}</li>
+                        <li class="price-subtitle">{{ .subtitle }}</li>
 
                         <li class="price-tag"><a href="{{ .link }}">GET STARTED</a></li>
 
-                        {{ range .Params.features }}
+                        {{ range .features }}
                         <li class="price-text">{{ . }}</li>
                         {{ end }}
 

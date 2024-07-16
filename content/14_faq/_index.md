@@ -1,6 +1,7 @@
 ---
-title: "Frequently Asked Questions"
-subtitle: "Quis autem velis ets reprehender net etid quiste voluptate."
+title: "FAQ Section"
+section_title: "Frequently Asked Questions"
+section_subtitle: "Quis autem velis ets reprehender net etid quiste voluptate."
 faqs:
   - question: "Velit ut tortizi pretium viverra suspendisse?"
     answer: "Utise wisi enim minim veniam, quis et stationes ullamcorper nets suscipit ets lobotis nisle consequat nihis etim. Quis autem velis ets reprehender net etid quiste voluptate velite esse sedis."

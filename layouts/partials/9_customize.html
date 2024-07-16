@@ -1,51 +1,45 @@
-<!--begin section-grey -->
+<!-- layouts/partials/section-customize.html -->
 <section class="section-grey">
-    
-    <!--begin container-->
     <div class="container">
-
-        <!--begin row-->
         <div class="row align-items-center">
-        
-            <!--begin col-md-6-->
             <div class="col-md-6">
-
                 <div class="nav flex-column nav-pills margin-right-25" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    {{ range .Params.features }}
-                    <a class="nav-link{{ if eq .id "v-pills-home" }} active{{ end }}" id="{{ .id }}-tab" data-toggle="pill" href="#{{ .id }}" role="tab" aria-controls="{{ .id }}" aria-selected="{{ if eq .id "v-pills-home" }}true{{ else }}false{{ end }}">
-                        <!--begin features-second -->
+                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
                         <div class="features-second">
-                            <img src="{{ .image }}" alt="pic">
-                            <h4 class="margin-bottom-5">{{ .title }}</h4>
-                            <p>{{ .description }}</p>
+                            <img src="{{ .Params.icon1 }}" alt="pic">
+                            <h4 class="margin-bottom-5">{{ .Params.title1 }}</h4>
+                            <p>{{ .Params.description1 }}</p>
                         </div>
-                        <!--end features-second-->
                     </a>
-                    {{ end }}
+                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <div class="features-second">
+                            <img src="{{ .Params.icon2 }}" alt="pic">
+                            <h4 class="margin-bottom-5">{{ .Params.title2 }}</h4>
+                            <p>{{ .Params.description2 }}</p>
+                        </div>
+                    </a>
+                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                        <div class="features-second">
+                            <img src="{{ .Params.icon3 }}" alt="pic">
+                            <h4 class="margin-bottom-5">{{ .Params.title3 }}</h4>
+                            <p>{{ .Params.description3 }}</p>
+                        </div>
+                    </a>
                 </div>
-
             </div>
-            <!--end col-md-6-->
-            
-            <!--begin col-md-6 -->
             <div class="col-md-6 padding-bottom-30">
-
                 <div class="tab-content margin-left-20" id="v-pills-tabContent">
-                    {{ range .Params.features }}
-                    <div class="tab-pane fade{{ if eq .id "v-pills-home" }} show active{{ end }}" id="{{ .id }}" role="tabpanel" aria-labelledby="{{ .id }}-tab">
-                        <img src="{{ .image }}" class="width-100 top-margins-images" alt="pic">
+                    <div class="tab-pane fade show active left-dots-img" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <img src="{{ .Params.image1 }}" class="width-100 top-margins-images" alt="pic">
                     </div>
-                    {{ end }}
+                    <div class="tab-pane fade left-dots-img" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"> 
+                        <img src="{{ .Params.image2 }}" class="width-100 top-margins-images" alt="pic">
+                    </div>
+                    <div class="tab-pane fade left-dots-img" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                        <img src="{{ .Params.image3 }}" class="width-100 top-margins-images" alt="pic">
+                    </div>
                 </div>
-
             </div>
-            <!--end col-md-6 -->
-
         </div>
-        <!--end row-->
-
     </div>
-    <!--end container-->
-
 </section>
-<!--end section-grey-->

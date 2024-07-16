@@ -10,10 +10,10 @@
             <!--begin col-md-6-->
             <div class="col-md-6">
 
-                <img src="{{ .Params.image }}" class="width-100" alt="{{ .Params.alt }}">
+                <img src="{{ .Params.image }}" class="width-100" alt="Happy">
 
             </div>
-            <!--end col-md-6-->
+            <!--end col-sm-6-->
             
             <!--begin col-md-6-->
             <div class="col-md-6">
@@ -21,26 +21,26 @@
                 <!--begin small-column-inside-->
                 <div class="small-col-inside">
 
-                    <h4>{{ .Params.title }}</h4>
+                    <h4>{{ .Params.headline }}</h4>
 
                     <!--begin accordion -->
                     <div class="accordion" id="accordionFAQ">
-
-                        {{ range .Params.faq }}
+                        
+                        {{ range $index, $item := .Params.items }}
                         <!--begin card -->
                         <div class="card">
-
-                            <div class="card-header" id="heading{{ .id }}">
+                            
+                            <div class="card-header" id="heading{{ $index }}">
                                 <h5 class="mb-0">
-                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{ .id }}" aria-expanded="true" aria-controls="collapse{{ .id }}">
-                                  {{ .Params.question }}
+                                <button class="btn btn-link {{ if eq $index 0 }}{{ "" }}{{ else }}collapsed{{ end }}" type="button" data-toggle="collapse" data-target="#collapse{{ $index }}" aria-expanded="{{ if eq $index 0 }}true{{ else }}false{{ end }}" aria-controls="collapse{{ $index }}">
+                                  {{ $item.question }}
                                 </button>
                                 </h5>
                             </div>
 
-                            <div id="collapse{{ .id }}" class="collapse {{ if eq .id 1 }}show{{ end }}" aria-labelledby="heading{{ .id }}" data-parent="#accordionFAQ">
+                            <div id="collapse{{ $index }}" class="collapse {{ if eq $index 0 }}show{{ end }}" aria-labelledby="heading{{ $index }}" data-parent="#accordionFAQ">
                                 <div class="card-body">
-                                    {{ .Params.answer }}
+                                {{ $item.answer }}
                                 </div>
                             </div>
 

@@ -10,10 +10,10 @@
             <!--begin col-md-12 -->
             <div class="col-md-12 text-center margin-bottom-30">
 
-                <h2 class="section-title">{{ .Title }}</h2>
+                <h2 class="section-title">{{ .Params.Title }}</h2>
 
-                <p class="section-subtitle">{{ .Params.subtitle }}</p>
-                
+                <p class="section-subtitle">{{ .Params.Subtitle }}</p>
+
             </div>
             <!--end col-md-12 -->
 
@@ -29,15 +29,15 @@
         <!--begin row-->
         <div class="row">
 
-            {{ range .Params.projects }}
+            {{ range .Params.items }}
             <!--begin col-md-4 -->
             <div class="col-md-4 col-sm-6 col-xs-12 p-0 m-0">
 
                 <figure class="gallery-insta">
                     <!--begin popup-gallery-->
                     <div class="popup-gallery popup-gallery-rounded portfolio-pic">
-                        <a class="popup2" href="{{ .image | absURL }}">
-                            <img src="{{ .image | absURL }}" class="width-100" alt="{{ .alt }}">
+                        <a class="popup2" href="{{ .image }}">
+                            <img src="{{ .image }}" class="width-100" alt="pic" width="555" height="460">
                             <span class="eye-wrapper"><i class="fa fa-search-plus eye-icon" style="font-size: 38px;"></i></span>
                         </a>
                     </div>
