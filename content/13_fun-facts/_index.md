@@ -1,0 +1,20 @@
+---
+title: "Fun Facts About Our Agency"
+facts:
+  - number: "1050+"
+    label: "Projects Completed"
+    icon: "far fa-gem"
+    color: "blue"
+  - number: "217k"
+    label: "Happy Clients"
+    icon: "far fa-heart"
+    color: "red"
+  - number: "1210"
+    label: "Design Awards"
+    icon: "fas fa-award"
+    color: "green"
+  - number: "2137"
+    label: "Line Of Codes"
+    icon: "fas fa-anchor"
+    color: "yellow"
+---

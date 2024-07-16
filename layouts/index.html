@@ -1,23 +1,48 @@
 {{ define "main" }}
 
-
 {{ $hero := .Site.GetPage "/hero" }}
-{{ partial "1_hero" $hero}}
+{{ partial "1_hero" $hero }}
+
 {{ $partners := .Site.GetPage "/2_partners" }}
-{{ partial "2_partners" $partners}}
+{{ partial "2_partners" $partners }}
+
 {{ $about := .Site.GetPage "/3_about" }}
-    {{ partial "3_about" $about}}
-    {{ partial "4_testimonials" .}}
-    {{ partial "5_team" .}}
-    {{ partial "6_discover" .}}
-    {{ partial "7_portfolio" .}}
-    {{ partial "8_award-winning" .}}
-    {{ partial "9_customize" .}}
-    {{ partial "10_features" .}}
-    {{ partial "11_pricing" .}}
-    {{ partial "12_discover" .}}
-    {{ partial "13_fun-facts" .}}
-    {{ partial "14_faq" .}}
-    {{ partial "15_contact" .}}
+{{ partial "3_about" $about }}
+
+{{ $testimonials := .Site.GetPage "/4_testimonials" }}
+{{ partial "4_testimonials" $testimonials }}
+
+{{ $team := .Site.GetPage "/5_team" }}
+{{ partial "5_team" $team }}
+
+{{ $discover := .Site.GetPage "/6_discover" }}
+{{ partial "6_discover" $discover }}
+
+{{ $portfolio := .Site.GetPage "/7_portfolio" }}
+{{ partial "7_portfolio" $portfolio }}
+
+{{ $awardWinning := .Site.GetPage "/8_award-winning" }}
+{{ partial "8_award-winning" $awardWinning }}
+
+{{ $customize := .Site.GetPage "/9_customize" }}
+{{ partial "9_customize" $customize }}
+
+{{ $features := .Site.GetPage "/10_features" }}
+{{ partial "10_features" $features }}
+
+{{ $pricing := .Site.GetPage "/11_pricing" }}
+{{ partial "11_pricing" $pricing }}
+
+{{ $discover2 := .Site.GetPage "/12_discover" }}
+{{ partial "12_discover" $discover2 }}
+
+{{ $funFacts := .Site.GetPage "/13_fun-facts" }}
+{{ partial "13_fun-facts" $funFacts }}
+
+{{ $faq := .Site.GetPage "/14_faq" }}
+{{ partial "14_faq" $faq }}
+
+{{ $contact := .Site.GetPage "/15_contact" }}
+{{ partial "15_contact" $contact }}
 
 {{ end }}

@@ -47,3 +47,194 @@ collections:
         ] }
 
 
+  - name: "4_testimonials"
+    label: "Testimonials Section"
+    folder: "content/4_testimonials"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Testimonials", name: "testimonials", widget: "list", fields: [
+          { label: "Index", name: "index", widget: "hidden", default: 0 },
+          { label: "Testimonial Image", name: "testimonial_image", widget: "image", required: false },
+          { label: "Video Link", name: "video_link", widget: "string" },
+          { label: "Testimonial Text", name: "testimonial_text", widget: "text" },
+          { label: "Testimonial Author", name: "testimonial_author", widget: "string" },
+          { label: "Testimonial Position", name: "testimonial_position", widget: "string" }
+        ] }
+
+  - name: "5_team"
+    label: "Team Section"
+    folder: "content/5_team"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Section Title", name: "section_title", widget: "string" }
+      - { label: "Section Subtitle", name: "section_subtitle", widget: "string" }
+      - { label: "Team Members", name: "team_members", widget: "list", fields: [
+          { label: "Name", name: "name", widget: "string" },
+          { label: "Image", name: "image", widget: "image", required: false },
+          { label: "Color", name: "color", widget: "select", options: ["green", "red", "yellow"] },
+          { label: "Position", name: "position", widget: "string" },
+          { label: "Bio", name: "bio", widget: "text" }
+        ] }
+
+
+  - name: "6_discover"
+    label: "Discover Section"
+    folder: "content/6_discover"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Benefits", name: "benefits", widget: "list", field: { label: "Benefit", name: "benefit", widget: "string" } }
+      - { label: "Button Text", name: "button_text", widget: "string" }
+      - { label: "Button Link", name: "button_link", widget: "string" }
+
+  - name: "portfolio"
+    label: "Portfolio Section"
+    folder: "content/portfolio"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "text" }
+      - { label: "Projects", name: "projects", widget: "list", fields: [
+          { label: "Image", name: "image", widget: "image" },
+          { label: "Alt Text", name: "alt", widget: "string" }
+        ]}
+
+  - name: "award-winning"
+    label: "Award-Winning Section"
+    folder: "content/award-winning"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Buttons", name: "buttons", widget: "list", fields: [
+          { label: "Text", name: "text", widget: "string" },
+          { label: "Link", name: "link", widget: "string" }
+        ]}
+
+  - name: "customize"
+    label: "Customize Section"
+    folder: "content/customize"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Features", name: "features", widget: "list", fields: [
+          { label: "ID", name: "id", widget: "string" },
+          { label: "Title", name: "title", widget: "string" },
+          { label: "Description", name: "description", widget: "text" },
+          { label: "Image", name: "image", widget: "image" }
+        ]}
+
+  - name: "features"
+    label: "Features Section"
+    folder: "content/features"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Features", name: "features", widget: "list", fields: [
+          { label: "Title", name: "title", widget: "string" },
+          { label: "Description", name: "description", widget: "text" },
+          { label: "Icon", name: "icon", widget: "string" },
+          { label: "Color", name: "color", widget: "select", options: [
+              { label: "Light Green", value: "light-green" },
+              { label: "Light Blue", value: "light-blue" },
+              { label: "Orange", value: "orange" },
+              { label: "Dark Blue", value: "dark-blue" },
+              { label: "Light Red", value: "light-red" },
+              { label: "Dark Green", value: "dark-green" }
+            ]
+          }
+        ]}
+
+  - name: "pricing"
+    label: "Pricing Section"
+    folder: "content/pricing"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Link", name: "link", widget: "string" }
+      - { label: "Features", name: "features", widget: "list", default: ["Feature 1", "Feature 2"] }
+      - { label: "Color", name: "color", widget: "select", options: [
+            { label: "White", value: "white" },
+            { label: "Grey", value: "grey" }
+          ]
+        }
+      - { label: "Delay", name: "delay", widget: "string" }
+
+  - name: "discover"
+    label: "Discover Section"
+    folder: "content/discover"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Alt Text", name: "alt", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "FAQ", name: "faq", widget: "list", fields: [
+            { label: "ID", name: "id", widget: "number" },
+            { label: "Question", name: "question", widget: "string" },
+            { label: "Answer", name: "answer", widget: "text" }
+          ]
+        }
+
+  - name: "fun-facts"
+    label: "Fun Facts Section"
+    folder: "content/fun-facts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Facts", name: "facts", widget: "list", fields: [
+            { label: "Number", name: "number", widget: "string" },
+            { label: "Label", name: "label", widget: "string" },
+            { label: "Icon", name: "icon", widget: "string" },
+            { label: "Color", name: "color", widget: "select", options: [
+                { label: "Blue", value: "blue" },
+                { label: "Red", value: "red" },
+                { label: "Green", value: "green" },
+                { label: "Yellow", value: "yellow" }
+              ]
+            }
+          ]
+        }
+
+  - name: "faq"
+    label: "FAQ Section"
+    folder: "content/faq"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "FAQs", name: "faqs", widget: "list", fields: [
+            { label: "Question", name: "question", widget: "string" },
+            { label: "Answer", name: "answer", widget: "text" }
+          ]
+        }
+
+  - name: "contact"
+    label: "Contact Section"
+    folder: "content/contact"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Company Name Placeholder", name: "company_name_placeholder", widget: "string" }
+      - { label: "Email Placeholder", name: "email_placeholder", widget: "string" }
+      - { label: "Submit Button Text", name: "submit_text", widget: "string" }
+      - { label: "Form Action", name: "form_action", widget: "string" }
+      - { label: "Success Message", name: "success_message", widget: "string" }
+      - { label: "Terms", name: "terms", widget: "string" }

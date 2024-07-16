@@ -1,0 +1,20 @@
+---
+section_title: "Meet Our Team"
+section_subtitle: "Discover more about our high performing team."
+team_members:
+  - name: "CHRISTINA HAWKINS"
+    image: "/images/team-member-1.jpg"
+    color: "green"
+    position: "Head of SEO"
+    bio: "Christina is our co-founder and has developed search strategies for a variety of clients for over 5 years."
+  - name: "ANDRES JOHANSON"
+    image: "/images/team-member-2.jpg"
+    color: "red"
+    position: "Marketing Manager"
+    bio: "Andres fell in love with marketing at school and looks forward to being part of the industry for years."
+  - name: "ALEXANDRA SMITHS"
+    image: "/images/team-member-3.jpg"
+    color: "yellow"
+    position: "SEO Specialist"
+    bio: "Graduating with a degree in Spanish, English, and French, Alexandra has always loved writing."
+---

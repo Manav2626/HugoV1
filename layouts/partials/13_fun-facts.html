@@ -1,71 +1,41 @@
-        <!--begin fun-facts -->
-        <section class="section-grey small-padding-bottom">
+<!--begin fun-facts -->
+<section class="section-grey small-padding-bottom">
+
+    <!--begin container-->
+    <div class="container">
+
+        <!--begin row-->
+        <div class="row">
         
-            <!--begin container-->
-            <div class="container">
-    
-                <!--begin row-->
-                <div class="row">
-                
-                    <!--begin col md 7 -->
-                    <div class="col-md-7 mx-auto margin-bottom-10 text-center">
-    
-                        <h4>Fun Facts About Our Agency</h4>
-    
-                    </div>
-                    <!--end col md 7-->
-                
-                </div>
-                <!--end row-->
-        
-                <!--begin row-->
-                <div class="row">
-            
-                    <!--begin fun-facts-box -->
-                    <div class="col-md-2 offset-md-2 fun-facts-box blue text-center">
-                        
-                        <i class="far fa-gem"></i>
-                        
-                        <p class="fun-facts-title"><span class="facts-numbers">1050+</span><br>Projects Completed</p>
-                        
-                    </div>
-                    <!--end fun-facts-box -->
-    
-                    <!--begin fun-facts-box -->
-                    <div class="col-md-2 fun-facts-box red text-center">
-                        
-                        <i class="far fa-heart"></i>
-                                                   
-                        <p class="fun-facts-title"><span class="facts-numbers">217k</span><br>Happy Clients</p>
-                            
-                    </div>
-                    <!--end fun-facts-box -->
-    
-                    <!--begin fun-facts-box -->
-                    <div class="col-md-2 fun-facts-box green text-center">
-                        
-                        <i class="fas fa-award"></i>
-                                                   
-                        <p class="fun-facts-title"><span class="facts-numbers">1210</span><br>Design Awards</p>
-                            
-                    </div>
-                    <!--end fun-facts-box -->
-    
-                    <!--begin fun-facts-box -->
-                    <div class="col-md-2 fun-facts-box yellow text-center">
-                        
-                        <i class="fas fa-anchor"></i>
-                                                   
-                        <p class="fun-facts-title"><span class="facts-numbers">2137</span><br>Line Of Codes</p>
-                            
-                    </div>
-                    <!--end fun-facts-box -->
-    
-                </div>
-                <!--end row-->
-        
+            <!--begin col md 7 -->
+            <div class="col-md-7 mx-auto margin-bottom-10 text-center">
+
+                <h4>{{ .title }}</h4>
+
             </div>
-            <!--end container-->
+            <!--end col md 7-->
         
-        </section>
-        <!--end fun-facts -->
+        </div>
+        <!--end row-->
+
+        <!--begin row-->
+        <div class="row">
+            {{ range .facts }}
+            <!--begin fun-facts-box -->
+            <div class="col-md-2 offset-md-2 fun-facts-box {{ .color }} text-center">
+                
+                <i class="{{ .icon }}"></i>
+                
+                <p class="fun-facts-title"><span class="facts-numbers">{{ .number }}</span><br>{{ .label }}</p>
+                
+            </div>
+            <!--end fun-facts-box -->
+            {{ end }}
+        </div>
+        <!--end row-->
+
+    </div>
+    <!--end container-->
+
+</section>
+<!--end fun-facts -->
