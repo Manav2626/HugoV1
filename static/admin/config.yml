@@ -191,22 +191,41 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Headline", name: "headline", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Facts", name: "facts", widget: "list", fields:
-          - { label: "Icon", name: "icon", widget: "string" }
-          - { label: "Number", name: "number", widget: "string" }
-          - { label: "Description", name: "description", widget: "string" }
-          - { label: "Color", name: "color", widget: "select", options:
-              [
-                { label: "Blue", value: "blue" },
-                { label: "Red", value: "red" },
-                { label: "Green", value: "green" },
-                { label: "Yellow", value: "yellow" }
-              ]
-            }
-        }
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Headline"
+        name: "headline"
+        widget: "string"
+      - label: "Description"
+        name: "description"
+        widget: "text"
+      - label: "Facts"
+        name: "facts"
+        widget: "list"
+        fields:
+          - label: "Icon"
+            name: "icon"
+            widget: "string"
+          - label: "Number"
+            name: "number"
+            widget: "string"
+          - label: "Description"
+            name: "description"
+            widget: "string"
+          - label: "Color"
+            name: "color"
+            widget: "select"
+            options:
+              - label: "Blue"
+                value: "blue"
+              - label: "Red"
+                value: "red"
+              - label: "Green"
+                value: "green"
+              - label: "Yellow"
+                value: "yellow"
+
 
   - name: "faq"
     label: "FAQ Section"
