@@ -98,7 +98,6 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Section Title", name: "section_title", widget: "string" } #this line was casuing problem 
-      - { label: "Testimonial Author", name: "testimonial_author", widget: "string" }
       - {
           label: "Testimonials",
           name: "testimonials",
