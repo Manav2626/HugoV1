@@ -1,11 +1,11 @@
 backend:
   name: git-gateway
-  branch: main
+  branch: main  # Branch to update (replace with your branch if different)
 
 publish_mode: editorial_workflow
 
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
+media_folder: "static/images/uploads"  # Folder where user uploads are stored
+public_folder: "/images/uploads"  # Folder for user uploads in the published site
 
 collections:
   - name: "hero"
@@ -13,30 +13,14 @@ collections:
     folder: "content/hero"
     create: true
     slug: "{{slug}}"
+    path: "{{slug}}/index"
+    media_folder: "" # Save images in the post's own folder instead of the static folder
+    public_folder: ""
     fields:
-      - label: "Title"
-        name: "title"
-        widget: "string"
-      - label: "Subtitle"
-        name: "subtitle"
-        widget: "string"
-      - label: "Image"
-        name: "image"
-        widget: "image"
-        required: false
-      - label: "Newsletter Success Message"
-        name: "newsletter_success_message"
-        widget: "string"
-      - label: "Newsletter Placeholder"
-        name: "newsletter_placeholder"
-        widget: "string"
-      - label: "Newsletter Button Text"
-        name: "newsletter_button_text"
-        widget: "string"
-      - label: "Newsletter Terms"
-        name: "newsletter_terms"
-        widget: "list"
-        fields:
-          - label: "Term"
-            name: "term"
-            widget: "string"
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Newsletter Success Message", name: "newsletter_success_message", widget: "string" }
+      - { label: "Newsletter Placeholder", name: "newsletter_placeholder", widget: "string" }
+      - { label: "Newsletter Button Text", name: "newsletter_button_text", widget: "string" }
+      - { label: "Newsletter Terms", name: "newsletter_terms", widget: "list", fields: [{label: "Term", name: "term", widget: "string"}] }
