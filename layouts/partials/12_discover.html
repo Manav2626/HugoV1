@@ -6,32 +6,33 @@
 
         <!--begin row-->
         <div class="row no-gutters">
-
+        
             <!--begin col-md-6-->
             <div class="col-md-6">
 
-                <img src="{{ .image }}" class="width-100" alt="{{ .alt }}">
+                <img src="{{ .Params.image }}" class="width-100" alt="{{ .Params.alt }}">
 
             </div>
             <!--end col-md-6-->
-
+            
             <!--begin col-md-6-->
             <div class="col-md-6">
 
                 <!--begin small-column-inside-->
                 <div class="small-col-inside">
 
-                    <h4>{{ .title }}</h4>
+                    <h4>{{ .Params.title }}</h4>
 
                     <!--begin accordion -->
                     <div class="accordion" id="accordionFAQ">
-                        {{ range .faq }}
+
+                        {{ range .Params.faq }}
                         <!--begin card -->
                         <div class="card">
 
                             <div class="card-header" id="heading{{ .id }}">
                                 <h5 class="mb-0">
-                                <button class="btn btn-link {{ if eq .id 1 }}collapsed{{ end }}" type="button" data-toggle="collapse" data-target="#collapse{{ .id }}" aria-expanded="{{ if eq .id 1 }}true{{ else }}false{{ end }}" aria-controls="collapse{{ .id }}">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{ .id }}" aria-expanded="true" aria-controls="collapse{{ .id }}">
                                   {{ .question }}
                                 </button>
                                 </h5>
@@ -39,13 +40,14 @@
 
                             <div id="collapse{{ .id }}" class="collapse {{ if eq .id 1 }}show{{ end }}" aria-labelledby="heading{{ .id }}" data-parent="#accordionFAQ">
                                 <div class="card-body">
-                                {{ .answer }}
+                                    {{ .answer }}
                                 </div>
                             </div>
 
                         </div>
                         <!--end card -->
                         {{ end }}
+
                     </div>
                     <!--end accordion -->
 
@@ -54,7 +56,7 @@
 
             </div>
             <!--end col-md-6-->
-
+        
         </div>
         <!--end row-->
 
