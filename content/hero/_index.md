@@ -1,5 +1,4 @@
 ---
-<<<<<<< HEAD
 title: "Discover The World's Most Advanced Online Tool"
 subtitle: "Track and analyze all your data in one central location."
 image: "/images/hero-image.png"
