@@ -9,11 +9,17 @@
         
             <!--begin col-sm-12-->
             <div class="col-md-10 mx-auto text-center partners">
-                <h5 class="partners-title">As featured in:</h5>
-                <img src="http://placehold.it/250x128" class="partners" alt="image">
-                <img src="http://placehold.it/250x128" class="partners" alt="image">
-                <img src="http://placehold.it/250x128" class="partners" alt="image">
-                <img src="http://placehold.it/250x128" class="partners" alt="image">
+                
+                <!-- Title -->
+                <h5 class="partners-title">{{ .Params.partners_title }}</h5>
+                
+                <!-- Partners Logos -->
+                <div class="partners-logos">
+                    {{ range .Params.partner_images }}
+                        <img src="{{ . | absURL }}" class="partners" alt="Partner Logo">
+                    {{ end }}
+                </div>
+                
             </div>
             <!--end col-sm-12-->
             

@@ -21,3 +21,13 @@ collections:
       - { label: "Newsletter Placeholder", name: "newsletter_placeholder", widget: "string" }
       - { label: "Newsletter Button Text", name: "newsletter_button_text", widget: "string" }
       - { label: "Newsletter Terms", name: "newsletter_terms", widget: "list", default: [], field: { label: "Term", name: "term", widget: "string" } }
+      
+  - name: "2_partners"
+    label: "Partners Section"
+    folder: "content/2_partners"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Partners Title", name: "partners_title", widget: "string" }
+      - { label: "Partner Images", name: "partner_images", widget: "list", field: { label: "Image", name: "image", widget: "image" } }
+

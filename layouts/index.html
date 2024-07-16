@@ -2,8 +2,9 @@
 
 
 {{ $hero := .Site.GetPage "/hero" }}
-    {{ partial "1_hero" $hero}}
-    {{ partial "2_partners" .}}
+{{ partial "1_hero" $hero}}
+{{ $partners := .Site.GetPage "/2_partners" }}
+    {{ partial "2_partners" $partners}}
     {{ partial "3_about" .}}
     {{ partial "4_testimonials" .}}
     {{ partial "5_team" .}}
