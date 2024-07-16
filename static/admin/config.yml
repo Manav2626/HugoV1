@@ -218,7 +218,7 @@ collections:
 
   - name: "workflow"
     label: "Customize Your Workflow"
-    file: "content/9_customize"
+    folder: "content/9_customize"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Icon 1", name: "icon1", widget: "image" }
