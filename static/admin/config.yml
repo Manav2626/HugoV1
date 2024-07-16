@@ -118,7 +118,7 @@ collections:
           { label: "Link", name: "link", widget: "string" }
         ]}
 
-   - name: "workflow"
+  - name: "workflow"
         label: "Customize Your Workflow"
         file: "content/workflow.md"
         fields:
@@ -136,7 +136,7 @@ collections:
           - { label: "Description 3", name: "description3", widget: "string" }
           - { label: "Image 3", name: "image3", widget: "image" }
 
-      - name: "features"
+  - name: "features"
         label: "Amazing Features"
         file: "content/features.md"
         fields:
@@ -151,7 +151,7 @@ collections:
               - { label: "Icon", name: "icon", widget: "string" }
               - { label: "Color", name: "color", widget: "string" }
 
-      - name: "plans"
+  - name: "plans"
         label: "Plans"
         file: "content/plans.md"
         fields:
@@ -171,7 +171,7 @@ collections:
               - { label: "Color", name: "color", widget: "string" }
               - { label: "Delay", name: "delay", widget: "string" }
 
-      - name: "discover"
+  - name: "discover"
         label: "Discover Section"
         file: "content/discover.md"
         fields:
@@ -185,7 +185,7 @@ collections:
               - { label: "Question", name: "question", widget: "string" }
               - { label: "Answer", name: "answer", widget: "text" }
 
-      - name: "fun-facts"
+  - name: "fun-facts"
         label: "Fun Facts"
         folder: "content/fun-facts"
         create: true
@@ -208,7 +208,7 @@ collections:
                 }
             }
 
-      - name: "faq"
+  - name: "faq"
         label: "FAQ Section"
         file: "content/faq.md"
         fields:
@@ -222,7 +222,7 @@ collections:
               - { label: "Question", name: "question", widget: "string" }
               - { label: "Answer", name: "answer", widget: "text" }
 
-      - name: "contact"
+  - name: "contact"
         label: "Contact Section"
         file: "content/contact.md"
         fields:
