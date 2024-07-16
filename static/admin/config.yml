@@ -97,6 +97,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - { label: "Testimonial Author", name: "testimonial_author", widget: "string" }
       - {
           label: "Testimonials",
           name: "testimonials",
@@ -128,6 +129,7 @@ collections:
               },
             ],
         }
+
 
   - name: "5_team"
     label: "Team Section"
@@ -248,7 +250,7 @@ collections:
           - { label: "Description", name: "description", widget: "text" }
           - { label: "Icon", name: "icon", widget: "string" }
           - { label: "Color", name: "color", widget: "string" }
-          
+
   - name: "plans"
     label: "Plans"
     folder: "content/11_pricing"
@@ -268,6 +270,7 @@ collections:
               - { label: "Feature", name: "feature", widget: "string" }
           - { label: "Color", name: "color", widget: "string" }
           - { label: "Delay", name: "delay", widget: "string" }
+
 
   - name: "discover"
     label: "Discover Section"
