@@ -215,6 +215,7 @@ collections:
               { label: "Link", name: "link", widget: "string" },
             ],
         }
+        
   - name: "workflow"
       label: "Customize Your Workflow"
       file: "content/9_customize"
