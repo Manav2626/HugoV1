@@ -21,7 +21,7 @@ collections:
       - { label: "Newsletter Placeholder", name: "newsletter_placeholder", widget: "string" }
       - { label: "Newsletter Button Text", name: "newsletter_button_text", widget: "string" }
       - { label: "Newsletter Terms", name: "newsletter_terms", widget: "list", default: [], field: { label: "Term", name: "term", widget: "string" } }
-      
+
   - name: "2_partners"
     label: "Partners Section"
     folder: "content/2_partners"
@@ -30,4 +30,20 @@ collections:
     fields:
       - { label: "Partners Title", name: "partners_title", widget: "string" }
       - { label: "Partner Images", name: "partner_images", widget: "list", field: { label: "Image", name: "image", widget: "image" } }
+
+  - name: "3_about"
+    label: "About Section"
+    folder: "content/3_about"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Section Title", name: "section_title", widget: "string" }
+      - { label: "Section Subtitle", name: "section_subtitle", widget: "string" }
+      - { label: "Services", name: "services", widget: "list", fields: [
+          { label: "Service Title", name: "service_title", widget: "string" },
+          { label: "Service Icon", name: "service_icon", widget: "string" },
+          { label: "Service Color", name: "service_color", widget: "string" },
+          { label: "Service Description", name: "service_description", widget: "text" }
+        ] }
+
 
