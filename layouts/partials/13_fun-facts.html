@@ -10,7 +10,7 @@
             <!--begin col md 7 -->
             <div class="col-md-7 mx-auto margin-bottom-10 text-center">
 
-                <h4>{{ .title }}</h4>
+                <h4>{{ .Params.title }}</h4>
 
             </div>
             <!--end col md 7-->
@@ -20,13 +20,13 @@
 
         <!--begin row-->
         <div class="row">
-            {{ range .facts }}
+            {{ range .Params.facts }}
             <!--begin fun-facts-box -->
             <div class="col-md-2 offset-md-2 fun-facts-box {{ .color }} text-center">
                 
                 <i class="{{ .icon }}"></i>
                 
-                <p class="fun-facts-title"><span class="facts-numbers">{{ .number }}</span><br>{{ .label }}</p>
+                <p class="fun-facts-title"><span class="facts-numbers">{{ .Params.number }}</span><br>{{ .Params.label }}</p>
                 
             </div>
             <!--end fun-facts-box -->

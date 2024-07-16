@@ -10,9 +10,9 @@
             <!--begin col-md-12-->
             <div class="col-md-12 text-center padding-bottom-10">
 
-                <h2 class="section-title">{{ .title }}</h2>
+                <h2 class="section-title">{{ .Params.title }}</h2>
 
-                <p class="section-subtitle">{{ .subtitle }}</p>
+                <p class="section-subtitle">{{ .Params.subtitle }}</p>
 
             </div>
             <!--end col-md-12 -->
@@ -22,15 +22,15 @@
 
         <!--begin row -->
         <div class="row">
-            {{ range .faqs }}
+            {{ range .Params.faqs }}
             <!--begin col-md-6-->
             <div class="col-md-6">
 
                 <div class="faq-box">
 
-                    <h5>{{ .question }}</h5>
+                    <h5>{{ .Params.question }}</h5>
 
-                    <p>{{ .answer }}</p>
+                    <p>{{ .Params.answer }}</p>
 
                 </div>
 
