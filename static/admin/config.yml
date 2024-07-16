@@ -8,7 +8,7 @@ media_folder: "static/images/uploads"  # Folder where user uploads are stored
 public_folder: "/images/uploads"  # Folder for user uploads in the published site
 
 collections:
-  - name: "hero"
+  - name: "1_hero"
     label: "Hero Section"
     folder: "content/hero"
     create: true
